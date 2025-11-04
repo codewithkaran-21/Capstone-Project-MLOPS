@@ -1,0 +1,10 @@
+artifact_location: file:///d:/Capstone-Project-MLOPS/notebooks/mlruns/0/models/m-3bd57d48ad3249ac9d5282a3ffa5532d/artifacts
+creation_timestamp: 1762069329596
+experiment_id: '0'
+last_updated_timestamp: 1762069346617
+model_id: m-3bd57d48ad3249ac9d5282a3ffa5532d
+model_type: null
+name: model
+source_run_id: ca377da8eafb40a29a0a3d6456a1447c
+status: 2
+status_message: null

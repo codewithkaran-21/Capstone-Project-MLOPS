@@ -1,0 +1,14 @@
+artifact_uri: file:///d:/Capstone-Project-MLOPS/notebooks/mlruns/0/32942a9f15eb4fd9936974c669ec9f6e/artifacts
+end_time: 1762069129549
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 32942a9f15eb4fd9936974c669ec9f6e
+run_name: adaptable-skunk-516
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1762069129484
+status: 3
+tags: []
+user_id: codey

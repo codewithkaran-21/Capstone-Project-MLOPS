@@ -1,0 +1,14 @@
+artifact_uri: file:///d:/Capstone-Project-MLOPS/notebooks/mlruns/0/ca377da8eafb40a29a0a3d6456a1447c/artifacts
+end_time: 1762069346652
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ca377da8eafb40a29a0a3d6456a1447c
+run_name: painted-fawn-906
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1762069327290
+status: 3
+tags: []
+user_id: codey

@@ -1,0 +1,14 @@
+artifact_uri: file:///d:/Capstone-Project-MLOPS/notebooks/mlruns/0/4db78bab8df94dbb9e7821b3a90f8f7c/artifacts
+end_time: 1762069088796
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 4db78bab8df94dbb9e7821b3a90f8f7c
+run_name: smiling-perch-83
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1762069088746
+status: 3
+tags: []
+user_id: codey
