@@ -57,6 +57,8 @@
     >> Add this auth token to github secret&var and update on ci file
 8bcf65b0e91a766a1a81eae535fa3d3ed6e95424
 
+26035b0fb3c060ce3a02aa8e95d46154679ffd7e
+
 31. Add dir "tests"&"scripts" and files within. This will contain our test related scripts for CI.
 
 >>>>> Moving to Docker <<<<<
