@@ -6,14 +6,14 @@ import yaml
 import logging
 from src.logger import logging
 from sklearn.model_selection import train_test_split
+from src.connections import s3_connection
 
 def load_params(params_path : str) -> dict:
     try:
         with open(params_path , 'r') as file:
             params = yaml.safe_load(file)
-
-        logging.debug(f"Params loaded from thr path %s , {params_path}")
-
+        logging.debug(f"Params loaded from thr path % , {params_path}")
+        return params
     except FileNotFoundError:
         logging.error("File not found %s " , params_path)
         raise
@@ -58,4 +58,28 @@ def save_data(train_data : pd.DataFrame , test_data : pd.DataFrame , data_path :
         train_data.to_csv(os.path.join(raw_data_path,"train.csv"),index=False)
         test_data.to_csv(os.path.join(raw_data_path,"test.csv"),index=False)
         logging.debug("Train and test data saved to %s " , raw_data_path)
-    except Exception
+    except Exception as e:
+        logging.error("Unexpected error occured while saving the data : %s",e)
+        raise
+
+def main():
+    try:
+        params = load_params(params_path="params.yaml")
+        test_size = params['data_ingestion']['test_size']
+        # test_size = 0.2
+        df = load_data(data_url="https://raw.githubusercontent.com/codewithkaran-21/Capstone-Project-MLOPS/refs/heads/main/notebooks/IMDB%20Dataset.csv")
+        # s3 = s3_connection.s3_operations("", "", "")
+        # df = s3.fetch_file_from_s3("IMDB Dataset.csv")
+
+        final_df = preprocess_data(df)
+        train_data , test_data = train_test_split(final_df , test_size=test_size ,random_state=42)
+        save_data(train_data , test_data , data_path="./data")
+    except Exception as e:
+        logging.error("Failed to complete Data Ingestion Process :%s",e)
+        print(f"Error : {e}")
+        
+
+if __name__ == "__main__":
+    main()
+
+
