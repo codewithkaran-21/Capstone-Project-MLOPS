@@ -10,16 +10,16 @@ import mlflow
 import dagshub
 import mlflow.sklearn
 
-# dagshub_token = os.getenv("CAPSTONE_TEST")
-# if not dagshub_token:
-#     raise EnvironmentError("CAPSTONE_TEST environment variable is not set")
+dagshub_token = os.getenv("CAPSTONE_TEST")
+if not dagshub_token:
+    raise EnvironmentError("CAPSTONE_TEST environment variable is not set")
 
-# os.environ["MLFLOW_TRACKING_USERNAME"] = dagshub_token
-# os.environ["MLFLOW_TACKING_PASSWORD"] = dagshub_token
+os.environ["MLFLOW_TRACKING_USERNAME"] = dagshub_token
+os.environ["MLFLOW_TACKING_PASSWORD"] = dagshub_token
 
-# dagshub_url = "https://dagshub.com"
-# repo_owner = "codewithkaran-21"
-# repo_name = "Capstone-Project-MLOPS"
+dagshub_url = "https://dagshub.com"
+repo_owner = "codewithkaran-21"
+repo_name = "Capstone-Project-MLOPS"
 
 #  Set up MLflow tracking URI
 # mlflow.set_tracking_uri(f'{dagshub_url}/{repo_owner}/{repo_name}.mlflow')
