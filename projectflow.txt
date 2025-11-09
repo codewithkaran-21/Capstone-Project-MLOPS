@@ -56,9 +56,7 @@
     >> Please make sure to save token << >> CAPSTONE_TEST: 54b1d67648a9b1267ef906fsdfsd8b292f779f0<<
     >> Add this auth token to github secret&var and update on ci file
     $env:CAPSTONE_TEST="your_access_token_here"
-8bcf65b0e91a766a1a81eae535fa3d3ed6e95424
 
-26035b0fb3c060ce3a02aa8e95d46154679ffd7e
 
 31. Add dir "tests"&"scripts" and files within. This will contain our test related scripts for CI.
 
