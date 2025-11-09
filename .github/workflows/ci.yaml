@@ -31,5 +31,4 @@ jobs:
         env:
           CAPSTONE_TEST: ${{ secrets.CAPSTONE_TEST }}
         run: |
-          echo "CAPSTONE_TEST is set: $CAPSTONE_TEST"
           dvc repro

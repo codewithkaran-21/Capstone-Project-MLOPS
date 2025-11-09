@@ -17,15 +17,15 @@ if not dagshub_token:
 os.environ["MLFLOW_TRACKING_USERNAME"] = dagshub_token
 os.environ["MLFLOW_TACKING_PASSWORD"] = dagshub_token
 
-# dagshub_url = "https://dagshub.com"
-# repo_owner = "codewithkaran-21"
-# repo_name = "Capstone-Project-MLOPS"
+dagshub_url = "https://dagshub.com"
+repo_owner = "codewithkaran-21"
+repo_name = "Capstone-Project-MLOPS"
 
 #  Set up MLflow tracking URI
-# mlflow.set_tracking_uri(f'{dagshub_url}/{repo_owner}/{repo_name}.mlflow')
+mlflow.set_tracking_uri(f'{dagshub_url}/{repo_owner}/{repo_name}.mlflow')
 
-mlflow.set_tracking_uri("https://dagshub.com/codewithkaran-21/Capstone-Project-MLOPS.mlflow")
-dagshub.init(repo_owner='codewithkaran-21', repo_name='Capstone-Project-MLOPS', mlflow=True)
+# mlflow.set_tracking_uri("https://dagshub.com/codewithkaran-21/Capstone-Project-MLOPS.mlflow")
+# dagshub.init(repo_owner='codewithkaran-21', repo_name='Capstone-Project-MLOPS', mlflow=True)
 
 def load_model(file_path : str):
     try:
