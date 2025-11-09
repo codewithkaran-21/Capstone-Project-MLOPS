@@ -30,7 +30,7 @@ jobs:
       - name: Run DVC pipeline
         env:
           DAGSHUB_USERNAME: codewithkaran-21
-          DAGSHUB_TOKEN: ${{ secrets.CAPSTONE_TEST }}
+          CAPSTONE_TEST: ${{ secrets.CAPSTONE_TEST }}
           MLFLOW_TRACKING_USERNAME: codewithkaran-21
           MLFLOW_TRACKING_PASSWORD: ${{ secrets.CAPSTONE_TEST }}
           MLFLOW_TRACKING_URI: https://dagshub.com/codewithkaran-21/Capstone-Project-MLOPS.mlflow
