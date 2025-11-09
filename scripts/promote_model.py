@@ -1,8 +1,8 @@
 import os 
 import mlflow
-
+    
 def promote_model():
-    dagshub_token = os.getenv["CAPSTONE_TEST"]
+    dagshub_token = os.getenv("CAPSTONE_TEST")
     if not dagshub_token:
         raise EnvironmentError("CAPSTONE_TEST environment variable is not set")
     
