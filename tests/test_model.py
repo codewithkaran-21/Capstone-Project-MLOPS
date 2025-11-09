@@ -23,7 +23,7 @@ class TestModelLoading(unittest.TestCase):
         cls.new_model_name = "my_model"
         cls.new_model_version = cls.get_latest_model_version(cls.new_model_name)
         cls.new_model_uri = f'models:/{cls.new_model_name}/{cls.new_model_version}'
-        cls.new_model = mlflow.pyfunc._load(cls.new_model_uri)
+        cls.new_model = mlflow.pyfunc.load_model(cls.new_model_uri)
 
         cls.vectorizer = pickle.load(open("models/vectorizer.pkl" , "rb"))
 
