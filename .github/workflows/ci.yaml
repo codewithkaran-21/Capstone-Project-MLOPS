@@ -54,7 +54,7 @@ jobs:
         env:
           CAPSTONE_TEST: ${{ secrets.CAPSTONE_TEST }}
         run: python -m unittest tests/test_flask_app.py
-        
+
       - name: Login to AWS ECR
         if: success()
         run: |
@@ -80,7 +80,4 @@ jobs:
         run: |
           docker push ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/${{ secrets.ECR_REPOSITORY }}:latest
 
-      - name: Set Up kubectl
-        uses: azure/setup-kubectl@v3
-        with:
-          version: 'latest'  
+      
